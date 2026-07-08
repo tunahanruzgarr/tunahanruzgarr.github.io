@@ -2,22 +2,10 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Tunahan Aşkın</title>
 
-<link rel="icon" type="image/jpeg" href="profile.jpg">
-
-<meta name="description" content="Tunahan Aşkın'ın resmi dijital kartviziti">
-
-<meta property="og:title" content="Tunahan Aşkın">
-<meta property="og:description" content="Telefon, Instagram, E-posta ve sosyal medya hesaplarım">
-<meta property="og:image" content="profile.jpg">
-<meta property="og:type" content="website">
-
-<meta name="theme-color" content="#160021">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="profile.jpg">
 
 <style>
 
@@ -25,51 +13,69 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#160021,#000);
-color:white;
+background:linear-gradient(135deg,#180022,#000);
 display:flex;
 justify-content:center;
 align-items:center;
 min-height:100vh;
+color:#fff;
 }
 
 .card{
-text-align:center;
-padding:30px;
+width:92%;
 max-width:420px;
-width:95%;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:30px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,.5);
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(25px);}
+to{opacity:1;transform:translateY(0);}
 }
 
 img{
 width:180px;
 height:180px;
 border-radius:50%;
+border:5px solid white;
 object-fit:cover;
-border:4px solid white;
 margin-bottom:20px;
 }
 
 h1{
-font-size:40px;
-margin-bottom:15px;
+font-size:38px;
+margin-bottom:20px;
 }
 
 a{
-color:#3ea6ff;
-text-decoration:none;
 display:block;
-margin:10px 0;
-font-size:22px;
+margin:12px 0;
+padding:14px;
+background:#ffffff15;
+border-radius:12px;
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:.3s;
 }
 
-p{
-font-size:22px;
-margin-top:20px;
-line-height:1.6;
+a:hover{
+background:#7a00ff;
+}
+
+.footer{
+margin-top:25px;
+font-size:15px;
+opacity:.7;
 }
 
 </style>
@@ -79,21 +85,27 @@ line-height:1.6;
 
 <div class="card">
 
-<img src="profile.jpg" alt="Tunahan Aşkın">
+<img src="profile.jpg">
 
 <h1>Tunahan Aşkın</h1>
 
-<a href="tel:05368705148">📞 05368705148</a>
+<a href="tel:05368705148">📞 Ara</a>
 
-<a href="https://instagram.com/tunahan_ruzgarr" target="_blank">Instagram</a>
+<a href="https://wa.me/905368705148">💬 WhatsApp</a>
 
-<a href="mailto:tunahan1996.askin@gmail.com">E-posta</a>
+<a href="mailto:tunahan1996.askin@gmail.com">📧 E-posta</a>
 
-<p>
-YouTube: tunahan aşkın<br>
-Twitch: tunahan_ruzgar<br>
-Kick: Tunahan_ruzgarr
-</p>
+<a href="https://instagram.com/tunahan_ruzgarr">📷 Instagram</a>
+
+<a href="https://youtube.com/@tunahanaskin">▶️ YouTube</a>
+
+<a href="https://twitch.tv/tunahan_ruzgar">🟣 Twitch</a>
+
+<a href="https://kick.com/Tunahan_ruzgarr">🟢 Kick</a>
+
+<div class="footer">
+© 2026 Tunahan Aşkın
+</div>
 
 </div>
 

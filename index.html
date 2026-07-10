@@ -93,7 +93,7 @@ opacity:.7;
 
 <a href="https://wa.me/905368705148">📱 WhatsApp</a>
 
-<a href="mailto:tunahan1996.askin@gmail.com">📠 E-posta</a>
+<a href="mailto:tunahan1996.askin@gmail.com">📧 E-posta</a>
 
 <a href="https://instagram.com/tunahan_ruzgarr">📸 Instagram</a>
 
@@ -109,19 +109,23 @@ opacity:.7;
 
 </div>
 
-</body>
-
-</div>
-
+<!-- Arka Plan Müziği -->
 <audio id="bgMusic" loop>
-    <source src="Müzik.mp3" type="audio/mpeg">
+    <source src="Muzik.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-document.addEventListener("click", function () {
-    document.getElementById("bgMusic").play();
-}, { once: true });
+const bgMusic = document.getElementById("bgMusic");
+
+function playMusic() {
+    bgMusic.play().catch(() => {});
+    document.removeEventListener("click", playMusic);
+    document.removeEventListener("touchstart", playMusic);
+}
+
+document.addEventListener("click", playMusic);
+document.addEventListener("touchstart", playMusic);
 </script>
 
-</vücut>
-</HTML>
+</body>
+</html>

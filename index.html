@@ -111,3 +111,21 @@ opacity:.7;
 
 </body>
 </html>
+<!-- Arka Plan Müziği -->
+<audio id="bgMusic" loop>
+    <source src="muzik.mp3" type="audio/mpeg">
+    Tarayıcınız ses oynatmayı desteklemiyor.
+</audio>
+
+<script>
+const bgMusic = document.getElementById("bgMusic");
+
+function playMusic() {
+    bgMusic.play().catch(() => {});
+    document.removeEventListener("click", playMusic);
+    document.removeEventListener("touchstart", playMusic);
+}
+
+document.addEventListener("click", playMusic);
+document.addEventListener("touchstart", playMusic);
+</script>

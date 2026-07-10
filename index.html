@@ -8,7 +8,6 @@
 <link rel="icon" href="profile.jpg">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -77,8 +76,8 @@ margin-top:25px;
 font-size:15px;
 opacity:.7;
 }
-
 </style>
+
 </head>
 
 <body>
@@ -109,22 +108,25 @@ opacity:.7;
 
 </div>
 
-<!-- Arka Plan Müziği -->
-<audio id="bgMusic" loop>
+<audio id="bgMusic" autoplay loop>
     <source src="Muzik.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-const bgMusic = document.getElementById("bgMusic");
+const music = document.getElementById("bgMusic");
+music.volume = 0.4;
 
-function playMusic() {
-    bgMusic.play().catch(() => {});
-    document.removeEventListener("click", playMusic);
-    document.removeEventListener("touchstart", playMusic);
-}
+window.addEventListener("load", function () {
+    music.play().catch(() => {});
+});
 
-document.addEventListener("click", playMusic);
-document.addEventListener("touchstart", playMusic);
+document.addEventListener("click", function () {
+    music.play().catch(() => {});
+}, { once: true });
+
+document.addEventListener("touchstart", function () {
+    music.play().catch(() => {});
+}, { once: true });
 </script>
 
 </body>
